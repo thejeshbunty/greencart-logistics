@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Simulation Dashboard</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <h1>Delivery Simulation KPIs</h1>
+
+  <canvas id="deliveryChart" width="400" height="200"></canvas>
+  <canvas id="fuelChart" width="400" height="200"></canvas>
+
+  <script>
+    // Replace this with fetch from your backend /simulate
+    const simulationData = {
+      totalProfit: 153008,
+      efficiencyScore: 20,
+      onTimeDeliveries: 80,
+      lateDeliveries: 20,
+      fuelCost: 1000
+    };
+
+    // On-time vs Late deliveries chart
+    const ctx1 = document.getElementById('deliveryChart').getContext('2d');
+    const deliveryChart = new Chart(ctx1, {
+      type: 'pie',
+      data: {
+        labels: ['On Time', 'Late'],
+        datasets: [{
+          label: 'Deliveries',
+          data: [simulationData.onTimeDeliveries, simulationData.lateDeliveries],
+          backgroundColor: ['#4caf50', '#f44336']
+        }]
+      }
+    });
+
+    // Fuel vs Profit chart
+    const ctx2 = document.getElementById('fuelChart').getContext('2d');
+    const fuelChart = new Chart(ctx2, {
+      type: 'bar',
+      data: {
+        labels: ['Total Profit', 'Fuel Cost'],
+        datasets: [{
+          label: 'Amount',
+          data: [simulationData.totalProfit, simulationData.fuelCost],
+          backgroundColor: ['#2196f3', '#ff9800']
+        }]
+      }
+    });
+  </script>
+</body>
+</html>
