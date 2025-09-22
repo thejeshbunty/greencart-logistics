@@ -120,4 +120,4 @@ Submission
 
 GitHub Repository: https://github.com/thejeshbunty/greencart-logistics
 
-Live Deployment: Your site is live at https://thejeshbunty.github.io/greencart-logistics/
+Live Deployment: The site is live at https://thejeshbunty.github.io/greencart-logistics/
