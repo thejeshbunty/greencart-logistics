@@ -118,6 +118,6 @@ Fuel Cost Breakdown
 
 Submission
 
-GitHub Repository: [Add your repo link here]
+GitHub Repository: https://github.com/thejeshbunty/greencart-logistics
 
-Live Deployment: [Add your deployed frontend/backend links]
+Live Deployment: Your site is live at https://thejeshbunty.github.io/greencart-logistics/
